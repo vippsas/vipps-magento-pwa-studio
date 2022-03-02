@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { bool, func, shape, string } from 'prop-types';
 
 import { useVipps } from '../talons/useVipps';
-import defaultClasses from './vipps.module.css';
+import defaultClasses from './vipps.payment.css';
 import { useStyle } from '@magento/venia-ui/lib/classify';
 import BillingAddress from "@magento/venia-ui/lib/components/CheckoutPage/BillingAddress";
 
