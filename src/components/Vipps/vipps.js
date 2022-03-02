@@ -14,7 +14,6 @@ import VippsPayment from "@vipps/module-payment/src/components/vipps.payment";
 import {StoreTitle} from "@magento/venia-ui/lib/components/Head";
 import {FormattedMessage, useIntl} from "react-intl";
 import {useCartContext} from "@magento/peregrine/lib/context/cart";
-import {getCartDetails} from "@magento/peregrine/lib/store/actions/cart";
 import {useAwaitQuery} from "@magento/peregrine/lib/hooks/useAwaitQuery";
 import GET_CART_DETAILS from "@magento/peregrine/lib/talons/CartPage/cartPage.gql";
 
@@ -23,7 +22,7 @@ const Vipps = (props) => {
     const {formatMessage} = useIntl();
     const {getCartDetailsQuery} = GET_CART_DETAILS;
 
-    const [{ cartId }, { createCart, removeCart }] = useCartContext();
+    const [{ cartId }, { createCart, removeCart, getCartDetails }] = useCartContext();
 
     const location = useLocation();
     const searchParams = useMemo(() => new URLSearchParams(location.search), [
