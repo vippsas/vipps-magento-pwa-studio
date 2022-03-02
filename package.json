@@ -1,0 +1,18 @@
+{
+  "name": "@vipps/module-payment",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Volodymyr Klymenko <volodymyr.klymenko@vaimo.com>",
+  "license": "MIT",
+  "pwa-studio": {
+    "targets": {
+      "intercept": "intercept.js"
+    }
+  },
+  "peerDependencies": {
+    "@magento/pwa-buildpack": "*",
+    "@magento/venia-ui": "*",
+    "react": "~16.9.0",
+    "react-router-dom": "~5.1.0"
+  }
+}
