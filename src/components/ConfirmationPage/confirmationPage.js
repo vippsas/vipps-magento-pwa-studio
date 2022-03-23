@@ -2,7 +2,7 @@
 import React, {useCallback, useEffect, useMemo} from 'react';
 import { useLocation } from "react-router-dom";
 
-import defaultClasses from "./vipps.module.css";
+import defaultClasses from "./confirmationPage.module.css";
 import {useMutation, useQuery} from "@apollo/client";
 import { fullPageLoadingIndicator } from '@magento/venia-ui/lib/components/LoadingIndicator';
 
@@ -17,7 +17,7 @@ import {useCartContext} from "@magento/peregrine/lib/context/cart";
 import {useAwaitQuery} from "@magento/peregrine/lib/hooks/useAwaitQuery";
 import GET_CART_DETAILS from "@magento/peregrine/lib/talons/CartPage/cartPage.gql";
 
-const Vipps = (props) => {
+const ConfirmationPage = (props) => {
     const classes = useStyle(defaultClasses, props.classes);
     const {formatMessage} = useIntl();
     const {getCartDetailsQuery} = GET_CART_DETAILS;
@@ -123,16 +123,5 @@ const Vipps = (props) => {
     return (<div />);
 };
 
-export default Vipps;
+export default ConfirmationPage;
 
-VippsPayment.propTypes = {
-    classes: shape({
-        root: string,
-        error: string,
-        mainContainer: string,
-        heading: string,
-        orderNumber: string,
-        email: string,
-        name: string,
-    }),
-};

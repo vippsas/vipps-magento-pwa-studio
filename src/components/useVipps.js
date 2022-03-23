@@ -3,7 +3,7 @@ import { useQuery, useMutation } from '@apollo/client';
 import mergeOperations from '@magento/peregrine/lib/util/shallowMerge';
 import { useCartContext } from '@magento/peregrine/lib/context/cart';
 
-import DEFAULT_OPERATIONS from './vipps.gql';
+import DEFAULT_OPERATIONS from '../talons/vipps.gql';
 import {mapAddressData} from "@magento/peregrine/lib/talons/CheckoutPage/BillingAddress/useBillingAddress";
 
 /**

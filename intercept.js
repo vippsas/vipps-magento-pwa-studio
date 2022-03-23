@@ -31,9 +31,9 @@ module.exports = (targets) => {
 
     targets.of("@magento/venia-ui").routes.tap((routes) => {
         routes.push({
-                        name: "Vipps",
+                        name: "VippsPaymentFallback",
                         pattern: "/vipps/payment/fallback",
-                        path: require.resolve("./src/components/Vipps/vipps.js"),
+                        path: require.resolve("./src/components/ConfirmationPage/confirmationPage.js"),
                     });
         return routes;
     });
