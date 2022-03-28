@@ -12,7 +12,7 @@
   "peerDependencies": {
     "@magento/pwa-buildpack": "*",
     "@magento/venia-ui": "*",
-    "react": "~16.9.0",
-    "react-router-dom": "~5.1.0"
+    "react": "~17.0.1",
+    "react-router-dom": "~5.2.0"
   }
 }
