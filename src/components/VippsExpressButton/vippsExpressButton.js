@@ -1,5 +1,5 @@
 
-import React, {useCallback, useEffect, useMemo} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import defaultClasses from "./vippsExpressButton.module.css";
 import {useStyle} from "@magento/venia-ui/lib/classify";
@@ -7,18 +7,34 @@ import VIPPS_INIT_PAYMENT_MUTATION from '../../talons/initPayment.gql';
 import {useMutation} from "@apollo/client";
 import {useCartContext} from "@magento/peregrine/lib/context/cart";
 import { useAddToCartButton } from '@magento/peregrine/lib/talons/Gallery/useAddToCartButton';
+import { clearCheckoutDataFromStorage } from '@magento/peregrine/lib/store/actions/checkout';
+
+import {
+    useApolloClient,
+} from '@apollo/client';
+
+import CHECKOUT_PAGE_OPERATIONS from '@magento/peregrine/lib/talons/CheckoutPage/checkoutPage.gql';
 
 const VippsExpressButton = (props) => {
+    let deactivateCart = true;
+
+    const[vippsExpressPressed, setVippsExpressPressed] = useState(false);
+
     const classes = useStyle(defaultClasses, props.classes);
     const { item } = props;
 
     const talonProps = useAddToCartButton({
                                               item
                                           });
-    const { handleAddToCart, isDisabled, isInStock } = talonProps;
 
-    const [{ cartId }, { createCart, removeCart, getCartDetails }] = useCartContext();
-    let deactivateCart = true;
+    const { handleAddToCart } = talonProps;
+
+    const apolloClient = useApolloClient();
+
+    const [{ cartId }, { createCart, removeCart }] = useCartContext();
+
+    const { createCartMutation } = CHECKOUT_PAGE_OPERATIONS;
+    const [fetchCartId] = useMutation(createCartMutation);
 
     const { vippsInitPaymentMutation } = VIPPS_INIT_PAYMENT_MUTATION;
     const [
@@ -30,19 +46,33 @@ const VippsExpressButton = (props) => {
         }
     ] = useMutation(vippsInitPaymentMutation);
 
-    const handleClick = async function () {
-        const fallbackUrl = window.location.origin.toString() + '/';
+    const handleClick = useCallback(async () => {
+        // Cleanup stale cart and customer info.
+        await clearCheckoutDataFromStorage();
+        await removeCart();
+        await apolloClient.clearCacheData(apolloClient, 'cart');
 
-        await handleAddToCart();
-
-        vippsInitPayment({
-                             variables: {
-                                 cartId,
-                                 fallbackUrl,
-                                 deactivateCart
-                             },
+        await createCart({
+                             fetchCartId
                          });
-    };
+
+        setVippsExpressPressed(true);
+    }, [ cartId ]);
+
+    useEffect(async () => {
+        if (cartId && vippsExpressPressed) {
+            await handleAddToCart();
+
+            const fallbackUrl = window.location.origin.toString() + '/';
+            await vippsInitPayment({
+                                       variables: {
+                                           cartId,
+                                           fallbackUrl,
+                                           deactivateCart
+                                       },
+                                   });
+        }
+    }, [ handleClick,vippsExpressPressed ]);
 
     useEffect(async () => {
         if (initData && initData.vippsInitPayment.url) {
@@ -52,7 +82,7 @@ const VippsExpressButton = (props) => {
 
     return (
         <a className="vipps-express-checkout"
-           href="#"
+           href="javascript:void(0);"
            data-action="checkout-form-submit"
            onClick={handleClick}
         >
