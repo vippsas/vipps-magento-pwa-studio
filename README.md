@@ -41,12 +41,3 @@ PWA websites are fast, secure, responsive, and cross-browser compatible. They ca
 The Magento PWA Studio project is a set of developer tools that allow for the development, deployment, and maintenance of a PWA storefront on top of Magento 2.3 and above. It uses modern tools and libraries to create a build system and framework that adheres to the Magento principle of extensibility.
 
 Please see [Magento PWA Studio documentation](https://developer.adobe.com/commerce/pwa-studio/) on the Adobe website.
-
-## Vipps Payment module for Magento 2
-
-Please see: [Vipps Payment module for Magento 2](https://developer.vippsmobilepay.com/docs/plugins-ext/magento/).
-
-## Vipps contact information
-
-For plugin related issues, please submit an issue on GitHub [for Magento 2](https://github.com/vippsas/vipps-magento-pwa-studio)
-or [contact us](https://developer.vippsmobilepay.com/docs/contact/).
