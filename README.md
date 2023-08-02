@@ -9,9 +9,7 @@ pagination_prev: null
 ---
 END_METADATA -->
 
-
-# Vipps Payment node js module for Magento 2 PWA Studio
-
+# Payment node js for Magento 2 PWA Studio
 
 <!-- START_COMMENT -->
 💥 Please use the plugin pages on [https://developer.vippsmobilepay.com](https://developer.vippsmobilepay.com/docs/plugins/). 💥
