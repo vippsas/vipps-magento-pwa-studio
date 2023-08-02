@@ -1,7 +1,7 @@
 <!-- START_METADATA
 ---
 title: Vipps Payment node js module for Magento 2 PWA Studio
-sidebar_label: Introduction
+sidebar_label: Payment node js module for Magento 2 PWA Studio
 sidebar_position: 1
 hide_table_of_contents: true
 pagination_next: null
@@ -9,7 +9,9 @@ pagination_prev: null
 ---
 END_METADATA -->
 
-# Payment node js for Magento 2 PWA Studio
+# Vipps Payment node js module for Magento 2 PWA Studio
+
+*This plugin is built and maintained by [Vaimo](https://www.vaimo.com/) and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).*
 
 <!-- START_COMMENT -->
 💥 Please use the plugin pages on [https://developer.vippsmobilepay.com](https://developer.vippsmobilepay.com/docs/plugins/). 💥
@@ -22,20 +24,14 @@ END_METADATA -->
 
 ## Installation
 
-In the root of your application, run `npm install git@github.com:vippsas/vipps-magento-pwa-studio.git`
+In the root of your application, run `npm install git@github.com:vippsas/vipps-magento-pwa-studio.git`.
 
-Copy content from `@vipps/module-payment/local-intercept.js` to root `local-intercept.js`
+Copy content from `@vipps/module-payment/local-intercept.js` to root `local-intercept.js`.
 
 ## Documentation
 
-### Progressive Web App
+A [Progressive Web App (PWA)](https://devdocs.magento.com/guides/v2.4/pwa/) is an app that can be used online or offline.
 
-A Progressive Web App (PWA) is a web application that uses modern web technologies and design patterns to provide a reliable, fast, and engaging user experience.
+The [Magento PWA Studio project](https://developer.adobe.com/commerce/pwa-studio/) provides tools for developing and maintaining PWAs.
 
-PWA websites are fast, secure, responsive, and cross-browser compatible. They can work offline and act like a native app on mobile.
-
-### Magento PWA Studio project
-
-The Magento PWA Studio project is a set of developer tools that allow for the development, deployment, and maintenance of a PWA storefront on top of Magento 2.3 and above. It uses modern tools and libraries to create a build system and framework that adheres to the Magento principle of extensibility.
-
-Please see [Magento PWA Studio documentation](https://developer.adobe.com/commerce/pwa-studio/) on the Adobe website.
+The *Vipps Payment node js module for Magento 2 PWA Studio* plugin can be downloaded from <https://github.com/vippsas/vipps-magento-pwa-studio/releases>.
