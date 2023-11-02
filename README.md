@@ -44,4 +44,5 @@ A [Progressive Web App (PWA)](https://devdocs.magento.com/guides/v2.4/pwa/) is a
 
 The [Magento PWA Studio project](https://developer.adobe.com/commerce/pwa-studio/) provides tools for developing and maintaining PWAs.
 
-The *Vipps Payment node js module for Magento 2 PWA Studio* plugin can be downloaded from <https://github.com/vippsas/vipps-magento-pwa-studio/releases>.
+The *Vipps Payment node js module for Magento 2 PWA Studio* plugin can be downloaded from
+[https://github.com/vippsas/vipps-magento-pwa-studio/releases](https://github.com/vippsas/vipps-magento-pwa-studio/releases).
