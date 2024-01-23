@@ -8,9 +8,8 @@ import { fullPageLoadingIndicator } from '@magento/venia-ui/lib/components/Loadi
 
 import VIPPS_GET_PAYMENT_DETAILS from '../../talons/getPaymentDetails.gql';
 import VIPPS_ACTIVATE_CART_MUTATION from "../../talons/activateCart.gql";
+import VIPPS_GET_STORE_CONFIGURATION from '../../talons/getStoreConfiguration.gql';
 import {useStyle} from "@magento/venia-ui/lib/classify";
-import {func, shape, string} from "prop-types";
-import VippsPayment from "@vipps/module-payment/src/components/vipps.payment";
 import {StoreTitle} from "@magento/venia-ui/lib/components/Head";
 import {FormattedMessage, useIntl} from "react-intl";
 import {useCartContext} from "@magento/peregrine/lib/context/cart";
@@ -18,10 +17,10 @@ import {useAwaitQuery} from "@magento/peregrine/lib/hooks/useAwaitQuery";
 import GET_CART_DETAILS from "@magento/peregrine/lib/talons/CartPage/cartPage.gql";
 
 const ConfirmationPage = (props) => {
-    const classes = useStyle(defaultClasses, props.classes);
     const {formatMessage} = useIntl();
     const {getCartDetailsQuery} = GET_CART_DETAILS;
-
+    const {getVippsStoreConfigurationQuery} = VIPPS_GET_STORE_CONFIGURATION;
+    let classes = useStyle(defaultClasses, props.classes);
     const [{ cartId }, { createCart, removeCart, getCartDetails }] = useCartContext();
 
     const location = useLocation();
@@ -33,6 +32,14 @@ const ConfirmationPage = (props) => {
     const { vippsActivateCartMutation } = VIPPS_ACTIVATE_CART_MUTATION;
     const [ fetchCartId ] = useMutation(vippsActivateCartMutation, {variables: {orderNumber}});
     const fetchCartDetails = useAwaitQuery(getCartDetailsQuery);
+
+    const { data: vippsPaymentConfig } = useQuery(getVippsStoreConfigurationQuery);
+    let vippsLabel = vippsPaymentConfig.storeConfig ? vippsPaymentConfig.storeConfig.vipps_label : 'Vipps';
+    let vippsVersion = vippsPaymentConfig.storeConfig ? vippsPaymentConfig.storeConfig.vipps_version : 'vipps_payment';
+
+    if (vippsVersion !== 'vipps_payment') {
+        classes.mainContainer = classes.mainContainerMobile;
+    }
 
     const {vippsGetPaymentDetails} = VIPPS_GET_PAYMENT_DETAILS;
     const { data: transactionData, loading, error } = useQuery(vippsGetPaymentDetails, {
@@ -63,7 +70,7 @@ const ConfirmationPage = (props) => {
             <StoreTitle>
                 {formatMessage({
                                    id: 'vipps.titleReceipt',
-                                   defaultMessage: 'Order was reserved in Vipps'
+                                   defaultMessage: `Order was reserved in ${vippsLabel}`
                                })}
             </StoreTitle>
             <div className={classes.mainContainer}>
@@ -73,7 +80,7 @@ const ConfirmationPage = (props) => {
                 >
                     <FormattedMessage
                         id={'vippsPage.thankYou'}
-                        defaultMessage={'Thank you for your payment! Your order was reserved in Vipps!'}
+                        defaultMessage={`Thank you for your payment! Your order was reserved in ${vippsLabel}!`}
                     />
                 </h2>
                 <div
@@ -93,7 +100,7 @@ const ConfirmationPage = (props) => {
             <StoreTitle>
                 {formatMessage({
                                    id: 'vipps.titleReceipt',
-                                   defaultMessage: 'Order was cancelled in Vipps'
+                                   defaultMessage: `Order was cancelled in ${vippsLabel}`
                                })}
             </StoreTitle>
             <div className={classes.mainContainer}>
@@ -103,7 +110,7 @@ const ConfirmationPage = (props) => {
                 >
                     <FormattedMessage
                         id={'vippsPage.thankYou'}
-                        defaultMessage={'Your order was cancelled in Vipps!'}
+                        defaultMessage={`Your order was cancelled in ${vippsLabel}!`}
                     />
                 </h2>
                 <div
