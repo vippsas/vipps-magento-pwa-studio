@@ -4,6 +4,7 @@ title: Vipps Payment node js module for Magento 2 PWA Studio
 sidebar_label: Payment node js module for Magento 2 PWA Studio
 sidebar_position: 1
 hide_table_of_contents: true
+description: Provide Vipps payment options for your Magento PWA.
 pagination_next: null
 pagination_prev: null
 ---
