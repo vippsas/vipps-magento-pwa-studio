@@ -24,14 +24,15 @@ END_METADATA -->
 💥 Please use the plugin pages on [https://developer.vippsmobilepay.com](https://developer.vippsmobilepay.com/docs/plugins-ext/magento-pwa-studio/). 💥
 <!-- END_COMMENT -->
 
-Magento PWA Studio is a collection of tools that lets developers build complex Progressive Web Applications on top of Magento 2 stores.
+Adobe Commerce PWA Studio is a collection of tools that lets developers build complex Progressive Web Applications on top of Adobe Commerce stores.
 
-This module supports adding Vipps single payment option to Magento.
+This module supports adding Vipps single payment option.
 
 ## Prerequisites
 
-* Magento >= 2.4.x
-* Vipps Payment Module >= 2.4.23
+* Adobe Commerce >= 2.4.x
+* PWA Studio latest >= 13.0.x.
+* [Vipps/MobilePay Payment Module for Adobe Commerce](https://developer.vippsmobilepay.com/docs/plugins-ext/magento/) >= 2.4.23
 
 ## Installation
 
