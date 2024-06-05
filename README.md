@@ -30,9 +30,9 @@ This module supports adding Vipps single payment option.
 
 ## Prerequisites
 
-* Adobe Commerce >= 2.4.x
-* PWA Studio latest >= 13.0.x.
-* [Vipps/MobilePay Payment Module for Adobe Commerce](https://developer.vippsmobilepay.com/docs/plugins-ext/magento/) >= 2.4.23
+* Adobe Commerce >= 2.4.*
+* PWA Studio latest >= 13.*.
+* [Vipps/MobilePay Payment Module for Adobe Commerce](https://developer.vippsmobilepay.com/docs/plugins-ext/magento/) >= 2.4.*
 
 ## Installation
 
