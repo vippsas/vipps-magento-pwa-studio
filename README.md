@@ -1,16 +1,16 @@
 <!-- START_METADATA
 ---
 title: Vipps Payment node js module for Magento 2 PWA Studio
-sidebar_label: Payment node js module for Magento 2 PWA Studio
+sidebar_label: Payment node js module for PWA Studio
 sidebar_position: 1
 hide_table_of_contents: true
-description: Provide Vipps payment options for your Magento PWA.
+description: Provide Vipps or MobilePay payment options for your Adobe PWA.
 pagination_next: null
 pagination_prev: null
 ---
 END_METADATA -->
 
-# Vipps Payment node js module for Magento 2 PWA Studio
+# Payment node js module for PWA Studio
 
 ![Support and development by Vaimo ](./docs/images/vaimo.svg#gh-light-mode-only)![Support and development by Vaimo](./docs/images/vaimo_dark.svg#gh-dark-mode-only)
 
@@ -41,9 +41,9 @@ Copy content from `@vipps/module-payment/local-intercept.js` to root `local-inte
 
 ## Documentation
 
-A [Progressive Web App (PWA)](https://devdocs.magento.com/guides/v2.4/pwa/) is an app that can be used online or offline.
+A Progressive Web App (PWA) is an app that can be used online or offline.
 
-The [Magento PWA Studio project](https://developer.adobe.com/commerce/pwa-studio/) provides tools for developing and maintaining PWAs.
+The [PWA Studio project](https://developer.adobe.com/commerce/pwa-studio/) provides tools for developing and maintaining PWAs.
 
-The *Vipps Payment node js module for Magento 2 PWA Studio* plugin can be downloaded from
+This plugin can be downloaded from
 [https://github.com/vippsas/vipps-magento-pwa-studio/releases](https://github.com/vippsas/vipps-magento-pwa-studio/releases).
