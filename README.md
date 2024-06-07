@@ -1,6 +1,6 @@
 <!-- START_METADATA
 ---
-title: Vipps Payment node js module for Magento 2 PWA Studio
+title: Vipps MobilePay Payment node js module for Magento 2 PWA Studio
 sidebar_label: Payment node js module for PWA Studio
 sidebar_position: 1
 hide_table_of_contents: true
@@ -10,7 +10,7 @@ pagination_prev: null
 ---
 END_METADATA -->
 
-# Payment node js module for PWA Studio
+# Payment node js module for Adobe Commerce PWA Studio
 
 ![Support and development by Vaimo ](./docs/images/vaimo.svg#gh-light-mode-only)![Support and development by Vaimo](./docs/images/vaimo_dark.svg#gh-dark-mode-only)
 
