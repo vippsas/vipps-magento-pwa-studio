@@ -17,6 +17,15 @@
     background: url(./vipps_logo_100x26.png) no-repeat left top;
 }
 
+.mainContainerMobile {
+    padding-top: 50px;
+    grid-column: 1;
+
+    display: grid;
+    row-gap: 1rem;
+    background: url(./mobilepay_logo.png) no-repeat left top;
+}
+
 .sidebarContainer {
     grid-column: 2;
 }
