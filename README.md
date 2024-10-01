@@ -18,7 +18,9 @@ END_METADATA -->
 
 ![MobilePay](./docs/images/mp.png) *Availability for MobilePay has not yet been determined.*
 
-*This plugin is built and maintained by [Vaimo](https://www.vaimo.com/) and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).*
+*This plugin is built and maintained by [Vaimo](https://www.vaimo.com/)
+and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).
+For support, [submit an issue](https://github.com/vippsas/vipps-magento-pwa-studio/issues) on GitHub.*
 
 <!-- START_COMMENT -->
 💥 Please use the plugin pages on [https://developer.vippsmobilepay.com](https://developer.vippsmobilepay.com/docs/plugins-ext/magento-pwa-studio/). 💥
@@ -48,3 +50,8 @@ The [PWA Studio project](https://developer.adobe.com/commerce/pwa-studio/) provi
 
 This plugin can be downloaded from
 [https://github.com/vippsas/vipps-magento-pwa-studio/releases](https://github.com/vippsas/vipps-magento-pwa-studio/releases).
+
+## Support
+
+For problems with the plugin,
+[submit an issue](https://github.com/vippsas/vipps-magento-pwa-studio/issues) on GitHub.
