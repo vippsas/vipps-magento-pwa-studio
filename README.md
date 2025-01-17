@@ -14,7 +14,7 @@ END_METADATA -->
 
 ![Support and development by Vaimo ](./docs/images/vaimo.svg#gh-light-mode-only)![Support and development by Vaimo](./docs/images/vaimo_dark.svg#gh-dark-mode-only)
 
-![null](./docs/images/vipps.png) *Only available for Vipps.*
+![Vipps icon](./docs/images/vipps.png) *Only available for Vipps.*
 
 *This plugin is built and maintained by [Vaimo](https://www.vaimo.com/)
 and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).
