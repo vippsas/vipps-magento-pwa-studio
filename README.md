@@ -18,7 +18,7 @@ END_METADATA -->
 
 *This plugin is built and maintained by [Vaimo](https://www.vaimo.com/)
 and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).
-For support, [submit an issue](https://github.com/vippsas/vipps-magento-pwa-studio/issues) on GitHub.*
+For support, email us at [vipps@bluemint.dev](mailto:vipps@bluemint.dev) or [submit an issue](https://github.com/vippsas/vipps-magento-pwa-studio/issues) on GitHub.*
 
 <!-- START_COMMENT -->
 💥 Please use the plugin pages on [https://developer.vippsmobilepay.com](https://developer.vippsmobilepay.com/docs/plugins-ext/magento-pwa-studio/). 💥
