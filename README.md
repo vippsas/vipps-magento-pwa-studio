@@ -7,6 +7,7 @@ hide_table_of_contents: true
 description: Provide Vipps or MobilePay payment options for your Adobe PWA.
 pagination_next: null
 pagination_prev: null
+section: Plugins
 ---
 END_METADATA -->
 
