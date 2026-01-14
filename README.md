@@ -13,12 +13,11 @@ END_METADATA -->
 
 # Payment node js module for Adobe Commerce PWA Studio
 
-![Support and development by Vaimo ](./docs/images/vaimo.svg#gh-light-mode-only)![Support and development by Vaimo](./docs/images/vaimo_dark.svg#gh-dark-mode-only)
+![Support and development by bluemint ](./docs/images/bluemint.svg)
 
 ![Vipps icon](./docs/images/vipps.png) *Only available for Vipps.*
 
-*This plugin is built and maintained by [Vaimo](https://www.vaimo.com/)
-and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).
+*This plugin is built and maintained by [bluemint](https://www.bluemint.no/) and is hosted on [GitHub](https://github.com/vippsas/vipps-magento-pwa-studio).
 For support, email us at [vipps@bluemint.dev](mailto:vipps@bluemint.dev).*
 
 <!-- START_COMMENT -->
